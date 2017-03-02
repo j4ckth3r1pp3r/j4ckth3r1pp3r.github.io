@@ -1,0 +1,24 @@
+{
+  "name": "memes-generator",
+  "version": "0.0.3",
+  "description": "Memes generator, lol",
+  "main": "js/main.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j4ckth3r1pp3r/j4ckth3r1pp3r.github.io.git"
+  },
+  "keywords": [
+    "memes",
+    "generator"
+  ],
+  "author": "Jack The Ripper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j4ckth3r1pp3r/j4ckth3r1pp3r.github.io/issues"
+  },
+  "homepage": "https://github.com/j4ckth3r1pp3r/j4ckth3r1pp3r.github.io#readme"
+}

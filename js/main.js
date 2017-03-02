@@ -1,24 +1,27 @@
-function wrapText(context, text, marginLeft, marginTop, maxWidth, lineHeight)
+function wrapText(context, text, marginLeft, centerText, maxWidth, lineHeight)
     {
         var words = text.split(" ");
         var countWords = words.length;
         var line = "";
+		var arr = [];
         for (var n = 0; n < countWords; n++) {
             var testLine = line + words[n] + " ";
             var testWidth = context.measureText(testLine).width;
             if (testWidth > maxWidth) {
-                context.fillText(line, marginLeft, marginTop);
+				arr.push({ line: line, marginLeft: marginLeft } );
                 line = words[n] + " ";
-                marginTop += lineHeight;
             }
             else {
                 line = testLine;
             }
         }
-        context.fillText(line, marginLeft, marginTop);
+		arr.push({ line: line, marginLeft: marginLeft } );
+		for (var i = 0; i < arr.length; i++)
+		{
+			var mar = ((arr.length * lineHeight) / 2) - i * lineHeight;
+			context.fillText(arr[i].line, arr[i].marginLeft, centerText - mar);
+		}
     }
-
-$('#version').text($('.versions').find('> ul > li > b').eq(0).text());
 
 var img=document.getElementById("dickmeme");
 var imgText;
@@ -33,7 +36,7 @@ $('.meme').submit(function(e) {
   imgText.font='bold 12px Arial';
   imgText.fillStyle='#000';
   imgText.textAlign="center";
-  wrapText(imgText, text, 365, 39, 60, 12);
+  wrapText(imgText, text, 365, 58, 60, 12);
 
   $('canvas').slideDown();
 });

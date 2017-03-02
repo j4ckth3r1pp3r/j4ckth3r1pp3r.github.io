@@ -49,7 +49,8 @@
           <div class="col-lg-4">
             <form class="meme" action="#" method="post">
               <div class="form-group">
-                <input type="text" name="text" class="form-control meme-text" value="">
+                <label for="text">Текст для мемчанского:</label>
+                <input type="text" name="text" class="form-control meme-text" placeholder="Put your text suda" value="">
               </div>
               <input type="submit" name="submit" value="Sgenerirovat'" class="btn btn-primary">
             </form>
@@ -68,9 +69,16 @@
           <p><b>Че нового:</b></p>
           <ul>
             <li>
+              <b>0.0.3</b>
+              <ul>
+                <li>Вертикальное выравнирование (Сябки <a href="https://vk.com/salnkv" target="_blank">Сереже</a>)</li>
+                <li>Овервотч говно</li>
+              </ul>
+            </li>
+            <li>
               <b>0.0.2</b>
               <ul>
-                <li>Жирный,как твоя мамка, текст</li>
+                <li>Жирный, как твоя мамка, текст</li>
               </ul>
             </li>
           </ul>
@@ -80,12 +88,13 @@
       <hr>
 
       <footer>
-        <p>&copy; <a href="http://vk.com/j4ck_th3_r1pp3r">Jack The Ripper</a> 2к17</p>
+        <p>&copy; <a href="http://vk.com/j4ck_th3_r1pp3r" target="_blank">Jack The Ripper</a> 2к17</p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="node_modules/canvas-text-wrapper/canvas-text-wrapper.min.js"></script>
 
         <script src="js/main.js"></script>
     </body>
