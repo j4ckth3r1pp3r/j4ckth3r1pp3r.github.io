@@ -18,6 +18,8 @@ function wrapText(context, text, marginLeft, marginTop, maxWidth, lineHeight)
         context.fillText(line, marginLeft, marginTop);
     }
 
+$('#version').text($('.versions').find('> ul > li > b').eq(0).text());
+
 var img=document.getElementById("dickmeme");
 var imgText;
 var canvas;
@@ -28,7 +30,7 @@ $('.meme').submit(function(e) {
   imgText=canvas.getContext("2d");
   let text = $('.meme-text').val();
   imgText.drawImage(img,0,0);
-  imgText.font='12px Arial';
+  imgText.font='bold 12px Arial';
   imgText.fillStyle='#000';
   imgText.textAlign="center";
   wrapText(imgText, text, 365, 39, 60, 12);
